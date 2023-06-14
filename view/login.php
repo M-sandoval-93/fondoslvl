@@ -21,8 +21,7 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="#" method="post">
-
-                    <h2 class="title">Inicio de sesión</h2>
+                    <h2 class="title">INICIO DE SESIÓN</h2>
 
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -34,9 +33,9 @@
                         <input type="password" id="password" placeholder="Password">
                     </div>
 
-                    <input type="submit" value="ingresar ->" class="btn" id="btnIngresar">
+                    <input type="submit" value="LOGIN" class="btn" id="btnIngresar">
                     
-                    <span>También puedes visitar nuestras redes sociales</span>
+                    <span class="social-text">También puedes visitar nuestras redes sociales</span>
 
                     <div class="social-media">
                         <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
@@ -44,6 +43,18 @@
                         <a href="#" class="social-icon"><i class="fab fa-internet-explorer"></i></a>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div class="panel-container">
+            <div class="panel">
+                <!-- <div class="content">
+                    <h3>titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga accusamus magni ex pariatur ad quibusdam laborum minima, provident maiores? Sed consequatur, soluta vitae quo voluptate maiores fuga saepe iusto.</p>
+
+                    <button class="btn transparent"></button>
+                </div> -->
+                <img src="./asset/img_inicio_blue.svg" class="image" alt="Img inicial de la página">
             </div>
         </div>
     </div>

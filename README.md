@@ -1,5 +1,4 @@
 # fondoslvl
-control de fondos de establecimiento educacional
 
-
-Comienzo del proyecto
+# rediseño del login de la página
+# tomar como referencia, el login del sistema de atrasos y hacer cambio de sección
