@@ -12,12 +12,16 @@
     <link rel="stylesheet" href="./src/pluggin/Fontawesome-5.15.4/css/all.min.css">
 
     <!-- style -->
-    <link rel="stylesheet" href="./src/css/login.css?v=<?php echo $_SESSION['version']; ?>">
+    <link rel="stylesheet" href="./src/css/login.css?v=<?php //echo $_SESSION['version']; ?>">
+    <!-- <link rel="stylesheet" href="./src/css/login_respaldo.css?v=<?php //echo $_SESSION['version']; ?>"> -->
 
     <title>Control fondos</title>
 </head>
 <body>
-    <div class="container">
+
+    <!-- -------------------------- OPTION NUMBER ONE -------------------------- -->
+
+    <!-- <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="#" method="post">
@@ -48,15 +52,50 @@
 
         <div class="panel-container">
             <div class="panel">
-                <!-- <div class="content">
-                    <h3>titulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fuga accusamus magni ex pariatur ad quibusdam laborum minima, provident maiores? Sed consequatur, soluta vitae quo voluptate maiores fuga saepe iusto.</p>
-
-                    <button class="btn transparent"></button>
-                </div> -->
                 <img src="./asset/img_inicio_blue.svg" class="image" alt="Img inicial de la página">
             </div>
         </div>
+    </div> -->
+
+
+    <!-- -------------------------- OPTION NUMBER TWO -------------------------- -->
+
+    <div class="container">
+
+        <div class="login-container">
+            <form action="#" method="post" id="form-login">
+                <img src="./asset/logo_liceo.png" alt="logo del liceo">
+                <h2>inicio de sesión</h2>
+
+                <div class="login-input">
+                    <div class="login-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h5>Nombre de usuario</h5>
+                        <input type="text" id="userName" class="input" required>
+                    </div>
+                </div>
+
+                <div class="login-input">
+                    <div class="login-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    
+                    <div>
+                        <h5>Nombre de usuario</h5>
+                        <input type="text" id="userName" class="input" required>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="img-container">
+            <img src="./asset/img_inicio_blue.svg" alt="imagen referente a finanzas">
+        </div>
+
     </div>
 
 
