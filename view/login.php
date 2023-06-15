@@ -64,7 +64,7 @@
 
         <div class="login-container">
             <form action="#" method="post" id="form-login">
-                <img src="./asset/logo_liceo.png" alt="logo del liceo">
+                <img class="login-container__logo" src="./asset/logo_liceo.png" alt="logo del liceo">
                 <h2>inicio de sesión</h2>
 
                 <div class="login-input">
@@ -73,7 +73,7 @@
                     </div>
 
                     <div>
-                        <h5>Nombre de usuario</h5>
+                        <h5>User Name</h5>
                         <input type="text" id="userName" class="input" required>
                     </div>
                 </div>
@@ -84,9 +84,19 @@
                     </div>
                     
                     <div>
-                        <h5>Nombre de usuario</h5>
-                        <input type="text" id="userName" class="input" required>
+                        <h5>Password</h5>
+                        <input type="password" id="password" class="input" required>
                     </div>
+                </div>
+
+                <a href="#" class="link_recuperar">Recuperar password</a>
+
+                <input type="submit" class="btn" value="login">
+
+                <div class="login-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="http://liceovalentinletelier.cl" target="_blank"><i class="fab fa-internet-explorer"></i></a>
                 </div>
 
             </form>
