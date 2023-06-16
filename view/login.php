@@ -91,7 +91,9 @@
 
                 <a href="#" class="link_recuperar">Recuperar password</a>
 
-                <input type="submit" class="btn" value="login">
+                <div class="login-btn">
+                    <input type="submit" class="btn" value="login">
+                </div>
 
                 <div class="login-social">
                     <a href="#"><i class="fab fa-facebook"></i></a>
