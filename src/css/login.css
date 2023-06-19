@@ -279,7 +279,6 @@ form h2 {
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    
 }
 
 .login-btn {
@@ -316,6 +315,11 @@ form h2 {
 
 .btn:hover {
     box-shadow: 2px 2px 5px var(--main-secondary);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 
@@ -368,8 +372,8 @@ span.animationYellow {
     position: absolute;
     width: 1300px;
     height: 1300px;
-    border-radius: 50%;
     left: 25%;
+    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -475,17 +479,18 @@ span.animationBlue {
     }
 
     .img-container img {
+        width: 30%;
+        min-width: 100px;
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
-        display: none;
     }
 
     span.circle {
-        width: 800px;
-        height: 800px;
+        width: 1000px;
+        height: 1000px;
         left: 50%;
         top: 5%;
         transform: translateX(-50%);
@@ -493,20 +498,15 @@ span.animationBlue {
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
-}
+    }
 
     span.animationYellow {
-        width: 800px;
-        height: 800px;
-        left: -5.5%;
-        top: 5%;
-}
+        display: none;
+    }
 
     span.animationBlue {
         display: none;
     }
-
-
 }
 
 
