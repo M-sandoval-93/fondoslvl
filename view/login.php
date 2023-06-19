@@ -76,6 +76,7 @@
                         <h5>User Name</h5>
                         <input type="text" id="userName" class="input" required>
                     </div>
+                    <span class="login-span"></span>
                 </div>
 
                 <div class="login-input">
@@ -87,6 +88,7 @@
                         <h5>Password</h5>
                         <input type="password" id="password" class="input" required>
                     </div>
+                    <span class="login-span"></span>
                 </div>
 
                 <a href="#" class="link_recuperar">Recuperar password</a>
@@ -105,7 +107,10 @@
         </div>
 
         <div class="img-container">
-            <img src="./asset/img_inicio_blue.svg" alt="imagen referente a finanzas">
+            <img src="./asset/img_inicio_blue2.svg" alt="imagen referente a finanzas">
+            <span class="circle"></span>
+            <span class="animationYellow"></span>
+            <span class="animationBlue"></span>
         </div>
 
     </div>
