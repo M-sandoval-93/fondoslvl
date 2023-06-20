@@ -34,6 +34,7 @@ function convertToUpperCase(value) {
     return value;
 }
 
+// function to verify user account (función para verificar cuenta de usuario)
 function verifyUserAccount() {
     $('#form-login').submit((e) => {
         e.preventDefault();
