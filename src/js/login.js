@@ -40,13 +40,8 @@ function verifyUserAccount() {
         let dataLogin = "login";
 
         // object to fetch user account data (objeto para capturar los datos de la cuenta de usuario)
-        // const userAccount = {
-        //     user: $.trim($('#userName').val()),
-        //     password: $.trim($('#password').val())
-        // }
-
         const userAccount = {
-            user: convertToUpperCase($.trim($('#userName').val())),
+            userName: convertToUpperCase($.trim($('#userName').val())),
             password: convertToUpperCase($.trim($('#password').val()))
         }
 

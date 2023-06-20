@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./src/pluggin/Fontawesome-5.15.4/css/all.min.css">
 
     <!-- style -->
-    <link rel="stylesheet" href="./src/css/login.css?v=<?php //echo $_SESSION['version']; ?>">
+    <link rel="stylesheet" href="./src/css/login.css?v=<?php echo $_SESSION['version']; ?>">
 
     <title>Control fondos</title>
 </head>

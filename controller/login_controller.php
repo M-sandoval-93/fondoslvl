@@ -7,8 +7,13 @@
 
     switch($data) {
         case "login":
-            $userAccount = json_decode(json_encode($_POST['userAccount']));
-            print $sessionStart->userCheck($userAccount);
+            $userAccount = json_decode(json_encode($_POST['userAccount'])); // converting js object to php object
+            print $sessionStart->checkUserAccount($userAccount);
+            break;
+
+        case "newPassword":
+            $password = json_decode(json_encode($_POST['password'])); // converting js object to php object
+            print $sessionStart->newPassword($password);
             break;
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-    require_once "./config/version.php";
+    require_once "./setting/version.php";
 
 
-    // SETEO DE LA ZONA HORARIA
+    // time zon e setting (seteo de la zona horaria)
     date_default_timezone_set('America/Santiago');
 
 

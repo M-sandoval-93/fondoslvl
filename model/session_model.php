@@ -38,7 +38,25 @@
             $md5Pass = md5($userAccount->password);
             $query = "";
 
+            $statement = $this->preConsult($query);
+            $statement->execute([$userAccount->userName, $md5Pass]);
+
+            // keep working on login
+            // seguir trabajando en inicio de sesión
+
         }
+
+        public function newPassword($password) {
+            if ($password->onePassword === $password->twoPassword) {
+                $md5Password = md5($password->onePassword);
+                $query = "";
+
+                $statement = $this->preConsult($query);
+                
+            }
+        }
+
+
 
 
     }
