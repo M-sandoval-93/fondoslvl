@@ -26,13 +26,58 @@ inputs.forEach(input => {
 
 // ------------------- INTERNAL FUNCTIONS -------------------
 
-//  (función para pasar valores alfanuméricos a mayúscula)
+// function to convert alphanumeric values to uppercase (función para convertir valores alfanuméricos a mayúscula)
 function convertToUpperCase(value) {
     if (/^[a-zA-Z0-9]+$/.test(value)) {
         return value.toUpperCase();
     }
     return value;
 }
+
+// function that allow you to create a new password for the user account (función que permite crear nueva contraseña para la cuenta de usuario)
+async function newPersonalPassword(userId) {
+    let dataLogin = "newPassword";
+
+    const { value: newPassword } = await Swal.fire({
+        title: 'contraseña personal !!',
+        customClass: {
+            title: 'titulo_cambio_clave'
+        },
+        html:
+            `<input id="onePassword" class="swal2-input" type="password" placeholder="Enter password">
+            <input id="twoPassword" class="swal2-input" type="password" placeholder="Enter password again">
+            <div class="text-secundary">Contraseña no superior a 10 digitos</div>`,
+        focusConfirm: false,
+        showCancelButton: false,
+        allowOutsideClick: false,
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#2c6cff',
+        preConfirm: () => {
+            const onePassword = convertToUpperCase($.trim($("#onePassword").val()));
+            const twoPassword = convertToUpperCase($.trim($("#twoPassword").val()));
+
+            if (onePassword !== twoPassword) { Swal.showValidationMessage('Las passwords ingresadas no coinciden !!'); }
+            
+            return { onePassword, twoPassword };
+        }
+    });
+
+    // continue in this section (continuar en esta sección)
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 // function to verify user account (función para verificar cuenta de usuario)
 function verifyUserAccount() {
@@ -49,7 +94,7 @@ function verifyUserAccount() {
         console.log(userAccount);
 
         // validation for null values (validación para campos nulos)
-        if (userAccount.user.length <= 0 || userAccount.password.length <= 0) {
+        if (userAccount.userName.length <= 0 || userAccount.password.length <= 0) {
             Swal.fire({
                 icon: 'warning',
                 title: 'Faltan datos importantes',
@@ -87,6 +132,7 @@ function verifyUserAccount() {
                 // condition to check if new password is create (condición para comprobar si se crea nueva contraseña)
                 if (response.fecha_ingreso == null) {
                     // function to create new password
+                    console.log('cambio de clase');
                     return false;
                 }
 
@@ -96,7 +142,7 @@ function verifyUserAccount() {
                     showConfirmButton: false,
                     timer: 1500
                 }). then(() => {
-                    windows.location.href = 'home';
+                    window.location.href = 'home';
                 });
             }
 

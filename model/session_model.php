@@ -45,59 +45,49 @@
             $statement = $this->preConsult($query);
             $statement->execute([$userAccount->userName, $md5Pass]);
 
-            if ($user = $statement->fetch()) {
-                if ($user['fecha_ingreso'] != null) {
-                    $this->setUserName($user['nombre_usuario']);
-                    $this->setUserPrivilege($user['id_privilegio']);
-                    $this->setUserId($user['id_usuario']);
+            if ($user = $statement->fetchObject()) {
+                // condition to verify that the account has already been initialized with a new passwprd (condición para verificar que la cuenta ya ha sido inicializada con una nueva contraseña)
+                if ($user->fecha_ingreso != null) {
+                    $this->setUserName($user->nombre_usuario);
+                    $this->setUserPrivilege($user->id_privilegio);
+                    $this->setUserId($user->id_usuario);
                     $this->json['privilege'] = $this->getUserPrivilege();
 
-                    // query SQL
-                    $query = "UPDATE controlfondo.usuario set controlfondo.fecha_ingreso = CURRENT_TIMESTAMP WHERE controlfondo.id_usuario = ?;";
+                    // sql query to update login date (consulta sql para actualizar la fecha de ingreso al sistema)
+                    $query = "UPDATE controlfondo.usuario set fecha_ingreso = CURRENT_TIMESTAMP WHERE id_usuario = ?;";
                     $statment = $this->preConsult($query);
-                    $statment->execute();
-
+                    $statment->execute([intval($this->getUserId())]);
                 }
+                // variables obtained to be able to create a new password (variables obtenidas para poder crear nueva contraseña)
+                $this->json = array_merge($this->json, 
+                    [
+                        'status' => $user->id_estado,
+                        'id_usuario' => $user->id_usuario,
+                        'fecha_ingreso' => $user->fecha_ingreso
+                    ]);
+                $this->result = true;
             }
 
-            // ------------------------------------------------------------------------
-            if ($usuario = $sentencia->fetch()) {
-                if ($usuario['fecha_ingreso'] != null) {
-                    $this->setUsser($usuario['nombre_usuario']);
-                    $this->setPrivilege($usuario['id_privilegio']);
-                    $this->setId($usuario['id_usuario']);
-                    $this->json['privilege'] = $this->getPrivilege();
-                }
-                $this->json['status'] = $usuario['id_estado'];
-                $this->json['id_usuario'] = $usuario['id_usuario'];
-                $this->json['fecha_ingreso'] = $usuario['fecha_ingreso'];
-                $this->res = true;
-            }
-
-            if ($this->json['fecha_ingreso'] != null) {
-                $query = "UPDATE controlfondo.usuario SET controlfondo.fecha_ingreso = CURRENT_TIMESTAMP WHERE controlfondo.id_usuario = ?;";
-                $sentencia = $this->preConsult($query);
-                $sentencia->execute([intval($this->getId())]);
-            }
-
-            $this->json['data'] = $this->res;
-            $this->closeConnection(); 
+            $this->json['data'] = $this->result;
+            $this->closeConnection();
             return json_encode($this->json);
-            // ------------------------------------------------------------------------
-
-            // keep working on login
-            // seguir trabajando en inicio de sesión
-
         }
 
+        // finnish method and check operation (finalizar metodo y comprobar funcionamiento)
         public function newPassword($password) {
-            if ($password->onePassword === $password->twoPassword) {
-                $md5Password = md5($password->onePassword);
-                $query = "";
+            // if ($password->onePassword === $password->twoPassword) {
+            //     $md5Password = md5($password->onePassword);
+            //     $query = "";
 
-                $statement = $this->preConsult($query);
-                
-            }
+            //     $statement = $this->preConsult($query);
+            //     if ($statement->execute([$md5Password, intval($password->id_usuario)])) {
+            //         $this->result = true;
+            //     }
+            // }
+            
+            // check operation
+            $this->closeConnection();
+            return json_encode($this->result);
         }
 
 

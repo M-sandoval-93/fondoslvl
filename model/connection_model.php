@@ -17,6 +17,7 @@
                 $this-> connection_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 return $this->connection_db;
+
             } catch(Exception $e) {
                 echo "Error: " . $e->getMessage();
             }
