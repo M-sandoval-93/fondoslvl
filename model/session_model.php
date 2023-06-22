@@ -86,7 +86,7 @@
             // }
             
             // check operation
-            $this->closeConnection();
+            // $this->closeConnection();
             return json_encode($this->result);
         }
 
