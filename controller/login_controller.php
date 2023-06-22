@@ -12,7 +12,7 @@
             break;
 
         case "newPassword":
-            $password = json_decode(json_encode($_POST['password'])); // converting js object to php object
+            $password = json_decode(json_encode($_POST['newPassword'])); // converting js object to php object
             print $sessionStart->newPassword($password);
             break;
     }

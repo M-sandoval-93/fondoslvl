@@ -13,6 +13,8 @@
 
     <!-- style -->
     <link rel="stylesheet" href="./src/css/login.css?v=<?php echo $_SESSION['version']; ?>">
+    <link rel="stylesheet" href="./src/css/normalize.css">
+    <link rel="stylesheet" href="./src/pluggin/SweetAlert2/sweetalert2.min.css">
 
     <title>Control fondos</title>
 </head>

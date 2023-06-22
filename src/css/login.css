@@ -95,13 +95,6 @@
     -o-transition: 1s;
 }
 
-form {
-    width: 80%;
-    min-width: 300px;
-    max-width: 350px;
-    padding: .8rem 0;
-}
-
 .login-container__logo {
     height: 130px;
     transition: 5s;
@@ -111,6 +104,13 @@ form {
     -o-transition: 5s;
     animation: 5s rotateY linear infinite;
     -webkit-animation: 5s rotateY linear infinite;
+}
+
+form {
+    width: 80%;
+    min-width: 300px;
+    max-width: 350px;
+    padding: .8rem 0;
 }
 
 form h2 {
@@ -416,6 +416,43 @@ span.animationBlue {
     -ms-transition: 1s;
     -o-transition: 1s;
 }
+
+
+/* modify and verify correct operation of the desired css style */
+/* (modificar y verificar correcto funcionamiento del estilo css deseado) */
+
+/* style login modal */
+/* .text-secundary {
+    text-align: left;
+    padding-left: 8%;
+    padding-top: 2%;
+    color: gray;
+    font-size: 15px;
+} */
+
+/* #swal2-html-container {
+    display: grid !important;
+} */
+
+/* .swal2-popup.swal2-modal.swal2-show {
+    width: auto !important;
+} */
+
+/* .titulo_cambio_clave {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #2c6cff;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+    color: white !important;
+} */
+
+
 
 
 /* MEDIA QUERYS  */

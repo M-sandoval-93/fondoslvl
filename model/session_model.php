@@ -62,8 +62,8 @@
                 $this->json = array_merge($this->json, 
                     [
                         'status' => $user->id_estado,
-                        'id_usuario' => $user->id_usuario,
-                        'fecha_ingreso' => $user->fecha_ingreso
+                        'userId' => $user->id_usuario,
+                        'admissionDate' => $user->fecha_ingreso
                     ]);
                 $this->result = true;
             }
@@ -75,18 +75,19 @@
 
         // finnish method and check operation (finalizar metodo y comprobar funcionamiento)
         public function newPassword($password) {
-            // if ($password->onePassword === $password->twoPassword) {
-            //     $md5Password = md5($password->onePassword);
-            //     $query = "";
+            if ($password->onePassword === $password->twoPassword && strlen($password->onePassword) >= 0) {
+                $md5Password = md5($password->onePassword);
 
-            //     $statement = $this->preConsult($query);
-            //     if ($statement->execute([$md5Password, intval($password->id_usuario)])) {
-            //         $this->result = true;
-            //     }
-            // }
-            
-            // check operation
-            // $this->closeConnection();
+                $query = "UPDATE controlfondo.usuario SET clave_usuario = ?, fecha_ingreso = CURRENT_TIMESTAMP 
+                    WHERE id_usuario = ?;";
+                
+                $statment = $this->preConsult($query);
+                if ($statment->execute([$md5Password, intval($password->userId)])) {
+                    $this->result = true;
+                }
+            }
+
+            $this->closeConnection();
             return json_encode($this->result);
         }
 
