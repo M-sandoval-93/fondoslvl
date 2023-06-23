@@ -74,21 +74,41 @@
         }
 
         // finnish method and check operation (finalizar metodo y comprobar funcionamiento)
-        public function newPassword($password) {
-            if ($password->onePassword === $password->twoPassword && strlen($password->onePassword) >= 0) {
-                $md5Password = md5($password->onePassword);
+        // public function newPassword($password) {
+        //     if ($password->onePassword === $password->twoPassword && strlen($password->onePassword) >= 0) {
+        //         $md5Password = md5($password->onePassword);
 
-                $query = "UPDATE controlfondo.usuario SET clave_usuario = ?, fecha_ingreso = CURRENT_TIMESTAMP 
-                    WHERE id_usuario = ?;";
+        //         $query = "UPDATE controlfondo.usuario SET clave_usuario = ?, fecha_ingreso = CURRENT_TIMESTAMP 
+        //             WHERE id_usuario = ?;";
                 
-                $statment = $this->preConsult($query);
-                if ($statment->execute([$md5Password, intval($password->userId)])) {
+        //         $statment = $this->preConsult($query);
+        //         if ($statment->execute([$md5Password, intval($password->userId)])) {
+        //             $this->result = true;
+        //         }
+        //     }
+
+        //     $this->closeConnection();
+        //     return json_encode($this->result);
+        // }
+        public function newPassword($password) {
+            try {
+                if ($password->onePassword === $password->twoPassword && strlen($password->onePassword) > 0) {
+                    $md5Password = md5($password->onePassword);
+                    $query = "UPDATE controlfondo.usuario SET clave_usuario = ?, fecha_ingreso} = CURRENT_TIMESTAMP 
+                        WHERE id_usuario = ?;";
+                
+                    $statment = $this->preConsult($query);
+                    $statment->execute([$md5Password, intval($password->userId)]);
                     $this->result = true;
                 }
-            }
 
-            $this->closeConnection();
-            return json_encode($this->result);
+            } catch (Exception) {
+                $this->result = null;
+
+            } finally {
+                $this->closeConnection();
+                return json_encode($this->result);
+            }
         }
 
 
