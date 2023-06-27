@@ -25,67 +25,67 @@
         
         <ul class="list">
             <!-- <header class="header">
-                <h1>logo tipo</h1>
+                <img src="./asset/logo_liceo.png" alt="Logo Liceo Bicentenario Valentín Letelier Madariaga">
+                <span class="header__title header__title--tipo">Liceo Bicentenario</span>
+                <span class="header__title header__title--nombre">Valentín Letelier Madariaga</span>
             </header> -->
 
             <li class="list__item">
                 <div class="list__button">
                     <i class="fas fa-home list__icon"></i>
-                    <a href="#" class="nav__link"> Dashboard </a>
+                    <a href="#" class="nav__link">Dashboard</a>
                 </div>
             </li>
 
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
                     <i class="fas fa-wallet"></i>
-                    <a href="#" class="nav__link"> Fondos </a>
+                    <a href="#" class="nav__link">Fondos</a>
                     <i class="fas fa-chevron-right list__arrow"></i>
                 </div>
 
-                <div class="list__show">
-                    <ul class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside"> Subvención </a>
-                    </ul>
-
-                    <ul class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside"> Fondos Globales </a>
-                    </ul>
-                </div>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="#" class="nav__link-nav__link--inside">Subvención</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link-nav__link--inside">Fondos globales</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
                     <i class="fas fa-paste"></i>
-                    <a href="#" class="nav__link"> Documentos </a>
+                    <a href="#" class="nav__link">Documentos</a>
                     <i class="fas fa-chevron-right list__arrow"></i>
                 </div>
 
-                <div class="list__show">
-                    <ul class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside"> Solicitud </a>
-                    </ul>
-
-                    <ul class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside"> Facturas </a>
-                    </ul>
-                </div>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="#" class="nav__link-nav__link--inside">Solicitudes</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="#" class="nav__link-nav__link--inside">Facturas</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="list__item">
                 <div class="list__button">
                     <i class="fas fa-boxes"></i>
-                    <a href="#" class="nav__link"> Inventario </a>
+                    <a href="#" class="nav__link">Inventario</a>
                 </div>
             </li>
 
         </ul>
     </nav>
 
-    <section class="section">
+    <!-- <section class="section">
         <article class="article">
-            barra superior
+            Barra superior
         </article>
-    </section>
+    </section> -->
 
 
     <script src="./src/js/main.js"></script>
