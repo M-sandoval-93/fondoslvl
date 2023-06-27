@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Icono de la página -->
+    <!-- page icon -->
     <link rel="shortcut icon" href="./asset/logo_liceo.png" type="image/x-icon">
 
     <!-- iconos -->
     <link rel="stylesheet" href="./src/pluggin/Fontawesome-5.15.4/css/all.min.css">
 
     <!-- style -->
-    <link rel="stylesheet" href="./src/css/login.css?v=<?php echo $_SESSION['version']; ?>">
     <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="stylesheet" href="./src/pluggin/SweetAlert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./src/css/login.css?v=<?php echo $_SESSION['version']; ?>">
 
     <title>Control fondos</title>
 </head>

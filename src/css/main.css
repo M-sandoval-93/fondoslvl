@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ---------- login font colors ---------- */
+:root {
+    --main-color: #eaebef;
+}
+/* ---------- login font colors ---------- */
+
+
+
+/* ---------- login function ---------- */
+
+/* ---------- login function ---------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+nav {
+    width: 300px;
+    position: fixed; /* revisar */
+}
+
+nav::before {
+     padding-top: 100px;
+}
+
+.nav__link {
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.nav__link--inside {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.nav__link--inside:hover {
+    background-color: #f6f8fa;
+}
+
+.list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0 16px 16px 0;
+    -webkit-border-radius: 0 16px 16px 0;
+    -moz-border-radius: 0 16px 16px 0;
+    -ms-border-radius: 0 16px 16px 0;
+    -o-border-radius: 0 16px 16px 0;
+    background-color: white;
+}
+
+.list__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list__item:first-child { /* Prueba */
+    padding-top: 100px;
+}
+
+.list__item--click { 
+    cursor: pointer;
+}
+
+.list__button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.modifyArrow .list__arrow {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.list__arrow {
+    margin-left: auto;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+
+.list__show {
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    transition: height .4s;
+    -webkit-transition: height .4s;
+    -moz-transition: height .4s;
+    -ms-transition: height .4s;
+    -o-transition: height .4s;
+    height: 0;
+}
+
+.list__inside {
+    padding-left: 0;
+}
+
+
+
+
+
+/* working section  */
+.section {
+    display: flex;
+    position: relative;
+    margin-left: 320px;
+}
+
+/* video para el primer borrador del nav */
+/* https://www.youtube.com/watch?v=jVITFZJEm_k&t=73s */
+
+/* siguientes videos para modificación e implementación */
+/* https://www.youtube.com/watch?v=ES8vJcUqE7s&t=81s */
+/* https://www.youtube.com/watch?v=ArTVfdHOB-M */
+/* https://www.youtube.com/watch?v=IqAPhLLd_bM */
+/* https://www.youtube.com/watch?v=bFvfqUMjvsA&t=52s */
+/* https://www.youtube.com/watch?v=a3rofqqrTBE */
+
+/* página en donde se muestra de manera detallada la creacipon de un nav */
+/* https://webdesign.tutsplus.com/es/tutorials/building-an-admin-dashboard-layout-with-css-and-a-touch-of-javascript--cms-33964 */
