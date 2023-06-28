@@ -10,7 +10,7 @@
     <!-- icons -->
     <link rel="stylesheet" href="./src/pluggin/Fontawesome-5.15.4/css/all.min.css">
 
-    <!-- <link rel="stylesheet" href="./src/css/normalize.css"> -->
+    <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="stylesheet" href="./src/pluggin/Bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/pluggin/SweetAlert2/sweetalert2.min.css">
     <link rel="stylesheet" href="./src/css/main.css?v=<?php echo $_SESSION['version']; ?>">
@@ -24,11 +24,11 @@
     <nav class="nav">
         
         <ul class="list">
-            <!-- <header class="header">
+            <header class="header">
                 <img src="./asset/logo_liceo.png" alt="Logo Liceo Bicentenario Valentín Letelier Madariaga">
                 <span class="header__title header__title--tipo">Liceo Bicentenario</span>
                 <span class="header__title header__title--nombre">Valentín Letelier Madariaga</span>
-            </header> -->
+            </header>
 
             <li class="list__item">
                 <div class="list__button">
@@ -39,9 +39,9 @@
 
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
-                    <i class="fas fa-wallet"></i>
+                    <i class="fas fa-wallet list__icon"></i>
                     <a href="#" class="nav__link">Fondos</a>
-                    <i class="fas fa-chevron-right list__arrow"></i>
+                    <i class="fas fa-chevron-right list__icon list__arrow"></i>
                 </div>
 
                 <ul class="list__show">
@@ -56,9 +56,9 @@
 
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
-                    <i class="fas fa-paste"></i>
+                    <i class="fas fa-paste list__icon"></i>
                     <a href="#" class="nav__link">Documentos</a>
-                    <i class="fas fa-chevron-right list__arrow"></i>
+                    <i class="fas fa-chevron-right list__icon list__arrow"></i>
                 </div>
 
                 <ul class="list__show">
@@ -73,7 +73,7 @@
 
             <li class="list__item">
                 <div class="list__button">
-                    <i class="fas fa-boxes"></i>
+                    <i class="fas fa-boxes list__icon"></i>
                     <a href="#" class="nav__link">Inventario</a>
                 </div>
             </li>
