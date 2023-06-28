@@ -10,7 +10,7 @@
     <!-- icons -->
     <link rel="stylesheet" href="./src/pluggin/Fontawesome-5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="./src/css/normalize.css">
+    <!-- <link rel="stylesheet" href="./src/css/normalize.css"> -->
     <link rel="stylesheet" href="./src/pluggin/Bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/pluggin/SweetAlert2/sweetalert2.min.css">
     <link rel="stylesheet" href="./src/css/main.css?v=<?php echo $_SESSION['version']; ?>">
@@ -46,10 +46,10 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link-nav__link--inside">Subvención</a>
+                        <a href="#" class="nav__link nav__link--inside">Subvención</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link-nav__link--inside">Fondos globales</a>
+                        <a href="#" class="nav__link nav__link--inside">Fondos globales</a>
                     </li>
                 </ul>
             </li>
@@ -63,10 +63,10 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link-nav__link--inside">Solicitudes</a>
+                        <a href="#" class="nav__link nav__link--inside">Solicitudes</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link-nav__link--inside">Facturas</a>
+                        <a href="#" class="nav__link nav__link--inside">Facturas</a>
                     </li>
                 </ul>
             </li>
