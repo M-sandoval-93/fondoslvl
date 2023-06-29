@@ -42,13 +42,21 @@ body {
 }
 
 .nav {
-    width: 300px;
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    border-radius: 0 1rem 1rem 0;
+    -webkit-border-radius: 0 1rem 1rem 0;
+    -moz-border-radius: 0 1rem 1rem 0;
+    -ms-border-radius: 0 1rem 1rem 0;
+    -o-border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
 }
 
 .nav__link {
     color: var(--text-nav);
     display: block;
-    padding: 15px 0;
+    padding: .9rem 0;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -59,7 +67,7 @@ body {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    padding-left: 1.2rem;
+    padding-left: 2rem;
     text-align: left;
 }
 
@@ -71,20 +79,36 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    border-radius: 0 16px 16px 0;
-    -webkit-border-radius: 0 16px 16px 0;
-    -moz-border-radius: 0 16px 16px 0;
-    -ms-border-radius: 0 16px 16px 0;
-    -o-border-radius: 0 16px 16px 0;
+    padding: 0;
     background-color: var(--nav-color);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 5px 40px 5px;
+}
+
+.header .header__img {
+    width: 80px;
+    padding-bottom: .4rem;
+    animation: 5s rotateY linear infinite;
+    -webkit-animation: 5s rotateY linear infinite;
+}
+
+.header__title {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .list__item {
     list-style: none;
     width: 100%;
     text-align: center;
+    margin: 2px 0;
     overflow: hidden;
 }
 
@@ -128,8 +152,8 @@ body {
 .list__show {
     width: 80%;
     margin-left: auto;
-    border-left: 2px solid var(--text-nav);
     padding: 0;
+    border-left: 2px solid var(--text-nav);
     list-style: none;
     transition: height .4s;
     -webkit-transition: height .4s;
@@ -147,136 +171,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-/* respaldo */
-
-/* .nav {
-    width: 350px;
-    height: 100vh;
-    position: fixed;
-    border-radius: 0 16px 16px 0;
-    -webkit-border-radius: 0 16px 16px 0;
-    -moz-border-radius: 0 16px 16px 0;
-    -ms-border-radius: 0 16px 16px 0;
-    -o-border-radius: 0 16px 16px 0;
-    overflow: hidden;
-} */
-
-/* .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px 5px 40px 5px;
-} */
-
-/* nav header img {
-    width: 80px;
-    padding-bottom: .4rem;
-    animation: 5s rotateY linear infinite;
-    -webkit-animation: 5s rotateY linear infinite;
-} */
-
-/* .header__title {
-    font-size: 1.5rem;
-    font-weight: 600;
-} */
-
-/* .nav__link {
-    color: var(--text-nav);
-    display: block;
-    padding: .9rem 0;
-    text-decoration: none;
-} */
-
-/* .nav__link--inside {
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    padding-left: 30px;
-    text-align: left;
-} */
-
-/* .nav__link--inside:hover {
-    background-color: #f6f8fa;
-} */
-
-/* .list {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    background-color: var(--main-color);
-} */
-
-/* .list__item {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    margin: 2px 0;
-    overflow: hidden;
-} */
-
-/* .list__item--click { 
-    cursor: pointer;
-} */
-
-/* .list__button {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 70%;
-    margin: 0 auto;
-} */
-
-/* .modifyArrow .list__arrow {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-} */
-
-/* .list__arrow {
-    margin-left: auto;
-    transition: transform .3s;
-    -webkit-transition: transform .3s;
-    -moz-transition: transform .3s;
-    -ms-transition: transform .3s;
-    -o-transition: transform .3s;
-} */
-
-/* .list__show {
-    width: 80%;
-    margin-left: auto;
-    border-left: 2px solid var(--text-nav);
-    transition: height .4s;
-    -webkit-transition: height .4s;
-    -moz-transition: height .4s;
-    -ms-transition: height .4s;
-    -o-transition: height .4s;
-    height: 0;
-} */
-
-/* .list__inside {
-    padding-left: 0;
-} */
-
-
-
-
-
 /* working section  */
 /* .section {
     display: flex;
@@ -285,7 +179,7 @@ body {
 } */
 
 /* video para el primer borrador del nav */
-/* https://www.youtube.com/watch?v=jVITFZJEm_k&t=73s */
+/* https://www.youtube.com/watch?v=jVITFZJEm_k&t=73s (listo !!) */
 
 /* siguientes videos para modificación e implementación */
 /* https://www.youtube.com/watch?v=ES8vJcUqE7s&t=81s */

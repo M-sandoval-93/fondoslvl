@@ -47,7 +47,10 @@
             $user = $statement->fetchObject();
 
             // condition to know if the query returned values (condición para saber si la consulta devolvio valores)
-            if ($statement->rowCount() > 0) $this->result = true;
+            if ($statement->rowCount() <= 0) {
+                $this->closeConnection();
+                return json_encode($this->result);
+            }
 
             // condition to verify that the account has already been initialized with a new passwprd (condición para verificar que la cuenta ya ha sido inicializada con una nueva contraseña)
             if ($user->fecha_ingreso != null) {
@@ -70,7 +73,6 @@
                     'admissionDate' => $user->fecha_ingreso
                 ]);
 
-            $this->json['data'] = $this->result;
             $this->closeConnection();
             return json_encode($this->json);
         }

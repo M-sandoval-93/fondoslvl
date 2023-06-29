@@ -113,7 +113,7 @@ function verifyUserAccount() {
             });
 
             // handling responses obtained in ajax query (manejo de las respuestas obtenidas en la consulta ajax)
-            if (response.data === false) throw new WrongUserAccount('Cuenta de usuario incorrecta !');
+            if (response === false) throw new WrongUserAccount('Cuenta de usuario incorrecta !');
             if (response.status !== 1) throw new UserAccounSuspended('Cuenta de usuario suspendida !');
             if (response.admissionDate === null) {
                 await newPersonalPassword(response.userId);
