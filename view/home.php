@@ -21,14 +21,14 @@
 </head>
 <body>
 
-    <nav class="nav">
+    <!-- <nav class="nav">
+        <header class="header">
+            <img src="./asset/logo_liceo.png" class="header__img" alt="Logo Liceo Bicentenario Valentín Letelier Madariaga">
+            <span class="header__title header__title--tipo">Liceo Bicentenario</span>
+            <span class="header__title header__title--nombre">Valentín Letelier Madariaga</span>
+        </header>
         
         <ul class="list">
-            <header class="header">
-                <img src="./asset/logo_liceo.png" class="header__img" alt="Logo Liceo Bicentenario Valentín Letelier Madariaga">
-                <span class="header__title header__title--tipo">Liceo Bicentenario</span>
-                <span class="header__title header__title--nombre">Valentín Letelier Madariaga</span>
-            </header>
 
             <li class="list__item">
                 <div class="list__button">
@@ -79,7 +79,7 @@
             </li>
 
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- <section class="section">
         <article class="article">
@@ -88,7 +88,7 @@
     </section> -->
 
 
-    <script src="./src/js/main.js"></script>
+    <!-- <script src="./src/js/main.js"></script> -->
     
 </body>
 </html>
