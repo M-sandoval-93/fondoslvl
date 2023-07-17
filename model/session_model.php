@@ -77,7 +77,7 @@
             return json_encode($this->json);
         }
 
-
+        // method to create new password
         public function newPassword($password) {
             if ($password->onePassword === $password->twoPassword && strlen($password->onePassword) > 0) {
                 $md5Password = md5($password->onePassword);
@@ -93,8 +93,12 @@
             return json_encode($this->result);
         }
 
-
-
+        // method to close session
+        public function closeSession() {
+            $this->closeConnection();
+            session_unset();
+            session_destroy();
+        }
 
     }
 

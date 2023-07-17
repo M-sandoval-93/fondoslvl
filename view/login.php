@@ -20,7 +20,9 @@
 </head>
 <body>
 
-    <div class="container">
+    <!-- option one -->
+
+    <!-- <div class="container">
 
         <div class="login-container">
             <form action="#" method="post" id="form-login">
@@ -73,7 +75,44 @@
             <span class="animationBlue"></span>
         </div>
 
-    </div>
+    </div> -->
+
+
+    <!-- option two -->
+    <section class="main">
+        <div class="main__login">
+            <img class="login__logo" src="./asset/logo_liceo.png" alt="logo del liceo">
+
+            <p class="login__title">Bienvenidos !</p>
+            <div class="login__separator"></div>
+            <p class="login__message">Ingresa una cuenta de usuario válida.</p>
+            
+            <form action="#" id="form-login" class="login__form" method="post">
+                <div class="form__control">
+                    <input type="text" id="userName" class="input" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div class="form__control">
+                    <input type="password" id="password" class="input" placeholder="Password" required>
+                    <i class="fas fa-key"></i>
+                    <a href="#" id="showPassword"><i class="fas fa-eye"></i></a>
+                </div>
+
+                <a href="#" class="form__recoverPassword">Recuperar contraseña</a>
+
+                <button class="form__button">login</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <section class="image">
+        <img src="./asset/img_login_6.png" alt="imagen de cuentas">
+        <span class="image__circle"></span>
+        <span class="image__edgeOne"></span>
+        <span class="image__edgeTwo"></span>
+    </section>
 
 
     <script src="./src/pluggin/Jquery/jquery-3.6.0.min.js"></script>

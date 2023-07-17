@@ -1,25 +1,37 @@
-// style fo login
+// variables to work login styles (variables para trabajar estilos de inicio de sesión)
 const inputs = document.querySelectorAll('.input');
+const inputPassword = document.getElementById('password');
+const showPassword = document.getElementById('showPassword');
 
-function focusFunc() {
-    let parent = this.parentNode.parentNode;
-    let span = this.parentElement.nextElementSibling;
-    parent.classList.add('focus');
-    span.classList.add('focus');
+function focusFunction() {
+    this.classList.add('focus');
+    this.nextElementSibling.classList.add('focus');
 }
 
-function blurFunc() {
-    let parent = this.parentNode.parentNode;
-    let span = this.parentElement.nextElementSibling;
+function blurFunction() {
     if (this.value == "") {
-        parent.classList.remove('focus');
-        span.classList.remove('focus');
+        this.classList.remove('focus');
+        this.nextElementSibling.classList.remove('focus');
     }
 }
 
 inputs.forEach(input => {
-    input.addEventListener('focus', focusFunc);
-    input.addEventListener('blur', blurFunc);
+    input.addEventListener('focus', focusFunction);
+    input.addEventListener('blur', blurFunction);
+});
+
+
+// evnets that allows displaying the entered key (evento que permite mostrar la clave ingresada)
+showPassword.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (inputPassword.type === 'password') {
+        inputPassword.type = 'text';
+        showPassword.classList.add('show');
+    } else {
+        inputPassword.type = 'password';
+        showPassword.classList.remove('show');
+    }
 });
 
 
@@ -140,9 +152,10 @@ function verifyUserAccount() {
         } finally {
             // reset login form
             $('#form-login').trigger('reset');
-            $('.login-input').removeClass('focus');
-            $('.login-span').removeClass('focus');
-            $('#password').focusout();
+            $('.input').removeClass('focus');
+            $('input ~ i').removeClass('focus');
+            $('#showPassword').removeClass('show');
+            $('#password').attr('type', 'password');
         }
     });
 }
