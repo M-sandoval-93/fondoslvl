@@ -86,6 +86,11 @@
         </a>
 
         <a href="#">
+          <span class="material-icons-sharp">inventory_2</span>
+          <h3>Control existencia</h3>
+        </a>
+
+        <a href="#">
           <span class="material-icons-sharp">inventory</span>
           <h3>Invetario</h3>
         </a>
